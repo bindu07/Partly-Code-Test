@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { SampleTableComponent } from './sample-table/sample-table.component';
+import { OnlynumbersDirective } from './onlynumber/onlynumbers.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, SampleTableComponent, OnlynumbersDirective],
+  imports: [BrowserModule, FormsModule, CommonModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

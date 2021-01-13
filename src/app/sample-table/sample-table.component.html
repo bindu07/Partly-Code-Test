@@ -1,0 +1,31 @@
+<table class="styled-table">
+  <thead></thead>
+  <tbody>
+    <tr *ngFor="let dynamic of dynamicArray; let i = index">
+      <td *ngFor="let column of dynamic; let j = index">
+        <input
+          appOnlynumbers
+          *ngIf="column.showData"
+          [(ngModel)]="column.data"
+          class="form-control"
+          type="number"
+          style="width: 100px"
+          (change)="valuechange($event)"
+        />
+        <span *ngIf="!column.showData">{{ column.sum }}</span>
+      </td>
+    </tr>
+    <tr>
+      <td *ngFor="let cols of colSum; let k = index">
+        <span>{{ colSum[k] }}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="addRow()" class="button" style="vertical-align: middle">
+  <span>Add Row </span>
+</button>
+<button (click)="addColumn()" class="button" style="vertical-align: middle">
+  <span>Add Column </span>
+</button>
