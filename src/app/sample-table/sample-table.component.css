@@ -1,3 +1,8 @@
+.divStyle {
+  width: 900px;
+  height: 400px;
+  overflow: auto;
+}
 .styled-table {
   border-collapse: collapse;
   margin: 25px 0;
