@@ -1,6 +1,6 @@
 .divStyle {
-  width: 900px;
-  height: 400px;
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
   overflow: auto;
 }
 .styled-table {

@@ -19,13 +19,6 @@ export class SampleTableComponent implements OnInit, OnDestroy {
         window.sessionStorage.getItem('sessionData')
       );
       this.colSum = JSON.parse(window.sessionStorage.getItem('columnsSum'));
-
-      console.log(
-        'SeSSSSION',
-        sessionStorage.length,
-        JSON.parse(window.sessionStorage.getItem('sessionData')),
-        JSON.parse(window.sessionStorage.getItem('columnsSum'))
-      );
     } else {
       let newData = [
         { data: '', showData: true },
@@ -99,7 +92,6 @@ export class SampleTableComponent implements OnInit, OnDestroy {
 
   calculateSumOfCols() {
     this.colSum = [];
-    this.totalSum = 0;
     for (let i = 0; i < this.dynamicArray[0].length - 1; i++) {
       this.sum = 0;
       this.dynamicArray.forEach((item) => {
